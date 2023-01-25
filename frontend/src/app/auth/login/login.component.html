@@ -1,0 +1,33 @@
+<div class="flex justify-content-center">
+  <div class="col-4 m-6">
+    <div class="col-12 m-2">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input type="text" pInputText placeholder="Email" />
+      </div>
+    </div>
+    <div class="col-12 m-2">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+        <input
+          [type]="isPasswordVisible ? 'text' : 'password'"
+          pInputText
+          placeholder="Password"
+        />
+      </div>
+    </div>
+    <div class="col-12 m-2">
+      <div class="p-inputgroup">
+        <p-checkbox
+          [(ngModel)]="isPasswordVisible"
+          [binary]="true"
+          inputId="binary"
+        ></p-checkbox>
+        <label class="text-layout m-2"> Mostrar contraseña </label>
+      </div>
+    </div>
+    <div class="col-12 m-2 flex justify-content-end">
+      <button pButton label="Login"></button>
+    </div>
+  </div>
+</div>
