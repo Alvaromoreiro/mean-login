@@ -10,6 +10,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
 
 import { FormsModule } from '@angular/forms';
 
@@ -28,7 +30,9 @@ import { FormsModule } from '@angular/forms';
     PasswordModule,
     CheckboxModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
+    MessagesModule,
+    MessageModule
   ]
 })
 export class AppAuthModule {}

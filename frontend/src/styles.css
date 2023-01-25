@@ -7,3 +7,7 @@ html, body{
 .text-layout{
   color: var(--text-color);
 }
+
+.text-error{
+  color: var(--text-color);
+}
