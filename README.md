@@ -7,10 +7,15 @@ Este proyecto es una aplicación web de login desarrollada con el stack MEAN (Mo
 El backend está desarrollado con JavaScript y utiliza las siguientes librerías:
 
 **bcryptjs** para encriptar las contraseñas de los usuarios
+
 **body-parser** para parsear los datos enviados en las peticiones HTTP
+
 **express** como framework para el desarrollo del servidor
+
 **jsonwebtoken** para generar tokens de autenticación
+
 **mongoose** para conectarse y realizar operaciones en la base de datos MongoDB
+
 **nodemon** para facilitar el desarrollo, ya que permite reiniciar automáticamente el servidor al detectar cambios en el código
 
 ## Frontend
@@ -18,8 +23,11 @@ El backend está desarrollado con JavaScript y utiliza las siguientes librerías
 El frontend está desarrollado con Angular 13.2.3 y utiliza las siguientes librerías:
 
 **primeng** para proveer un conjunto de componentes de UI
+
 **primeflex** para facilitar la creación de un diseño responsive
+
 **primeicons** para proveer un conjunto de iconos
+
 **rxjs** para facilitar la programación reactiva
 
 ## Instrucciones de uso
