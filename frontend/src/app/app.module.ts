@@ -11,15 +11,13 @@ import { MenuComponent } from './shared/menu/menu.component';
 //PRIMENG
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './components/home/home.component';
-import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HomeComponent,
-    ProfileComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

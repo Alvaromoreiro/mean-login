@@ -7,11 +7,16 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
   onSubmit() {
     throw new Error('Method not implemented.');
   }
 
-  form = new FormGroup({
+  registerForm = new FormGroup<{
+    name: FormControl<string | null>,
+    email: FormControl<string | null>,
+    password: FormControl<string | null>
+  }>({
     name: new FormControl('', [Validators.pattern('[a-zA-Z0-9]+')]),
     email: new FormControl('', [Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
     password: new FormControl('', [Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})')])
