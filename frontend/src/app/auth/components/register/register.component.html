@@ -1,27 +1,36 @@
-<!--TODO: ADD FORM CONTROLS-->
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <div class="flex justify-content-center">
     <div class="col-4 m-6">
       <div class="col-12 m-2">
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-          <input type="text" pInputText placeholder="Username" />
+          <input
+            formControlName="username"
+            type="text"
+            pInputText
+            placeholder="Username"
+          />
         </div>
       </div>
       <div class="col-12 m-2">
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
-          <input type="text" pInputText placeholder="Email" />
+          <input
+            formControlName="email"
+            type="text"
+            pInputText
+            placeholder="Email"
+          />
         </div>
       </div>
       <div class="col-12 m-2">
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
           <input
+            formControlName="password"
             [type]="isPasswordVisible ? 'text' : 'password'"
             pInputText
             placeholder="Password"
-            [class]="isPasswordSame ? 'ng-invalid ng-touched ng-dirty' : ''"
           />
         </div>
       </div>
@@ -29,25 +38,31 @@
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
           <input
+            formControlName="passwordConfirm"
             [type]="isPasswordVisible ? 'text' : 'password'"
             pInputText
             placeholder="Confirm password"
-            [class]="isPasswordSame ? 'ng-invalid ng-touched ng-dirty' : ''"
           />
         </div>
       </div>
-      <div class="col-12 m-2">
-        <small class="p-error"> ERROR </small>
+      <!--TODO CREATE ERROR COMPONENT-->
+      <div
+        class="col-12 m-2"
+        *ngIf="isFormSubmitted && registerForm.controls.username.errors?.['pattern']"
+      >
+        <small class="p-error"> ERROR Formato no permitido </small>
       </div>
       <div class="col-12 m-2">
         <small class="text-layout">
-          At least one lowercase.
+          The password must meet these three requirements:
           <br />
-          At least one uppercase.
+          - At least one lowercase.
           <br />
-          At least one numeric.
+          - At least one uppercase.
           <br />
-          Minimum 8 characters.
+          - At least one numeric.
+          <br />
+          - Minimum 8 characters.
         </small>
       </div>
       <div class="col-12 m-2">

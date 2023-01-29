@@ -6,6 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { RegisterFormErrorsComponent } from './components/register/components/register-form-errors/register-form-errors.component';
+
+
 
 //PRIMENG
 import { InputTextModule } from 'primeng/inputtext';
@@ -23,7 +26,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    RegisterFormErrorsComponent
   ],
   imports: [
     CommonModule,

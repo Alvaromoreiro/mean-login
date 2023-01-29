@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -8,26 +8,38 @@ import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms
 })
 export class RegisterComponent implements OnInit {
 
-  onSubmit() {
-    throw new Error('Method not implemented.');
-  }
+  private passwordMatchValidator: ValidationErrors = (form: FormGroup) => {
+    if (form.get('password')?.value !== form.get('passwordConfirm')?.value) {
+      return { passwordMismatch: true };
+    }
 
-  registerForm = new UntypedFormGroup<{
-    name: UntypedFormControl<string | null>,
-    email: UntypedFormControl<string | null>,
-    password: UntypedFormControl<string | null>
+    return null;
+  };
+
+  public registerForm = new FormGroup<{
+    username: FormControl<string | null>,
+    email: FormControl<string | null>,
+    password: FormControl<string | null>,
+    passwordConfirm: FormControl<string | null>
   }>({
-    name: new UntypedFormControl('', [Validators.pattern('[a-zA-Z0-9]+')]),
-    email: new UntypedFormControl('', [Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
-    password: new UntypedFormControl('', [Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})')])
-  });
+    username: new FormControl('', [Validators.pattern('[a-zA-Z0-9]+'), Validators.required]),
+    email: new FormControl('', [Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'), Validators.required]),
+    password: new FormControl('', [Validators.pattern('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$'), Validators.required]),
+    passwordConfirm: new FormControl('', [Validators.pattern('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$'), Validators.required])
+  }, this.passwordMatchValidator);
+
 
   isPasswordVisible: boolean = false;
-  isPasswordSame: boolean = false;
+  isFormSubmitted: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.isFormSubmitted = true;
+    console.log(this.registerForm);
   }
 
 }
