@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -12,14 +12,14 @@ export class RegisterComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  registerForm = new FormGroup<{
-    name: FormControl<string | null>,
-    email: FormControl<string | null>,
-    password: FormControl<string | null>
+  registerForm = new UntypedFormGroup<{
+    name: UntypedFormControl<string | null>,
+    email: UntypedFormControl<string | null>,
+    password: UntypedFormControl<string | null>
   }>({
-    name: new FormControl('', [Validators.pattern('[a-zA-Z0-9]+')]),
-    email: new FormControl('', [Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
-    password: new FormControl('', [Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})')])
+    name: new UntypedFormControl('', [Validators.pattern('[a-zA-Z0-9]+')]),
+    email: new UntypedFormControl('', [Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
+    password: new UntypedFormControl('', [Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})')])
   });
 
   isPasswordVisible: boolean = false;
