@@ -45,13 +45,10 @@
           />
         </div>
       </div>
-      <!--TODO CREATE ERROR COMPONENT-->
-      <div
-        class="col-12 m-2"
-        *ngIf="isFormSubmitted && registerForm.controls.username.errors?.['pattern']"
-      >
-        <small class="p-error"> ERROR Formato no permitido </small>
-      </div>
+      <app-register-form-errors
+        [isFormSubmitted]="isFormSubmitted"
+        [registerForm]="registerForm"
+      ></app-register-form-errors>
       <div class="col-12 m-2">
         <small class="text-layout">
           The password must meet these three requirements:

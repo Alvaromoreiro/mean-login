@@ -10,7 +10,7 @@ import { MenuComponent } from './shared/menu/menu.component';
 
 //PRIMENG
 import { ButtonModule } from 'primeng/button';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
