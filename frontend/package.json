@@ -18,13 +18,15 @@
     "@angular/platform-browser": "^14.2.12",
     "@angular/platform-browser-dynamic": "^14.2.12",
     "@angular/router": "^14.2.12",
+    "@ngrx/effects": "^14.3.3",
+    "@ngrx/store": "^14.3.3",
+    "animate.css": "^4.1.1",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primeng": "^13.4.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "animate.css": "^4.1.1"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.10",

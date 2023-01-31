@@ -11,6 +11,14 @@ const bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
 
 const app = express();
 const router = express.Router();
+const cors = require('cors');
+
+// If you want to use cors with whitelist
+// const whitelist = ['http://localhost:4200', 'http://localhost:3000'];
+// app.use(cors({origin: whitelist}));
+
+// Allow all origins
+app.use(cors());
 
 app.use(bodyParserJSON);
 app.use(bodyParserURLEncoded);

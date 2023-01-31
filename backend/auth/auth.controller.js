@@ -21,7 +21,7 @@ exports.registerUser = (req, res, next) => {
                 expiresIn: expiresIn
             });
 
-            res.send({ "user": user, "access_token": accessToken, "expires_in": expiresIn });
+            res.send({ accessToken, expiresIn });
         })
         .catch(err => {
             res.status(500).send(err);
@@ -44,11 +44,11 @@ exports.loginUser = ( req, res, next ) => {
             bcrypt.compare(userData.password, user.password)
             .then(result => {
                 if(result){
-                    const expires_in = 24 * 60 * 60;
+                    const expiresIn = 24 * 60 * 60;
                     const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, {
-                        expiresIn: expires_in
+                        expiresIn: expiresIn
                     });
-                    res.send({userData, accessToken, expires_in});
+                    res.send({accessToken, expiresIn});
                 }else {
                     res.status(409).send('Incorrect password');
                 }

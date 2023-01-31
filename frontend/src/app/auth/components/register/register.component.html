@@ -1,3 +1,6 @@
+<p *ngIf="(isLogged$ | async) == true">USER LOGADO</p>
+<p *ngIf="(isLogged$ | async) == false">USER SIN LOGAR</p>
+<p>{{ isLogged$ | async }}</p>
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <div class="flex justify-content-center">
     <div class="col-4 m-6">

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
+import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -19,6 +21,9 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 
 import { FormsModule } from '@angular/forms';
+import { AuthEffects } from './authStore/effects/auth.effects';
+import { StoreModule } from '@ngrx/store';
+import { authReducer } from './authStore/reducers/auth.reducers';
 
 
 
@@ -39,7 +44,10 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     ButtonModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    StoreModule.forRoot({ authState: authReducer }),
+    EffectsModule.forRoot([AuthEffects]),
+    HttpClientModule
   ]
 })
 export class AppAuthModule {}

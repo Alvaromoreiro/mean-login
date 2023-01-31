@@ -1,6 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { register } from '../../authStore/actions/auth.actions';
+import { selectIsAuthenticatedState, selectUserInfoState } from '../../authStore/selectors/auth.selectors';
 import { registerFormInterface } from '../../models/forms.model';
+import { RegisterRequest } from '../../services/models/auth-user.model';
+import { AppState } from '../../authStore/app.state'
 
 @Component({
   selector: 'app-register',
@@ -8,6 +14,11 @@ import { registerFormInterface } from '../../models/forms.model';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+
+  public isLogged$ = this.store.select(selectIsAuthenticatedState);
+  public userInfo$ = this.store.select(selectUserInfoState);
+
+  constructor(private store: Store<AppState>) {}
 
   isPasswordVisible: boolean = false;
   isFormSubmitted: boolean = false;
@@ -22,7 +33,6 @@ export class RegisterComponent {
     if (form.get('password')?.value !== form.get('passwordConfirm')?.value) {
       return { passwordMismatch: true };
     }
-
     return null;
   };
 
@@ -36,7 +46,12 @@ export class RegisterComponent {
   onSubmit() {
     this.isFormSubmitted = true;
     if (this.registerForm.valid) {
-      console.log(this.registerForm.value);
+      const userRegister: RegisterRequest = {
+        email: this.registerForm.value.email ? this.registerForm.value.email : '',
+        username: this.registerForm.value.username ? this.registerForm.value.username : '',
+        password: this.registerForm.value.password ? this.registerForm.value.password : '',
+      }
+      this.store.dispatch(register(userRegister))
     }
   }
 
