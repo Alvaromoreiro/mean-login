@@ -21,7 +21,7 @@ exports.registerUser = (req, res, next) => {
                 expiresIn: expiresIn
             });
 
-            res.send({ accessToken, expiresIn });
+            res.send({ email: newUser.email, username: newUser.username, accessToken, expiresIn });
         })
         .catch(err => {
             res.status(500).send(err);
@@ -64,6 +64,7 @@ exports.loginUser = ( req, res, next ) => {
 }
 
 exports.logoutUser = (req, res, next) => {
+    console.log(req)
     const accessToken = req.headers['authorization'];
     const userData = {
         email: req.body.email

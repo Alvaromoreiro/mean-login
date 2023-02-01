@@ -15,9 +15,6 @@ import { AppState } from '../../authStore/app.state'
 })
 export class RegisterComponent {
 
-  public isLogged$ = this.store.select(selectIsAuthenticatedState);
-  public userInfo$ = this.store.select(selectUserInfoState);
-
   constructor(private store: Store<AppState>) {}
 
   isPasswordVisible: boolean = false;

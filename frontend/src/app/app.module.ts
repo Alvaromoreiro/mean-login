@@ -11,6 +11,10 @@ import { MenuComponent } from './shared/menu/menu.component';
 //PRIMENG
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './pages/home/home.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { authReducer } from './auth/authStore/reducers/auth.reducers';
+import { AuthEffects } from './auth/authStore/effects/auth.effects';
 
 
 @NgModule({
@@ -25,7 +29,9 @@ import { HomeComponent } from './pages/home/home.component';
     AppAuthModule,
     AppAuthModule,
     RouterModule,
-    ButtonModule
+    ButtonModule,
+    StoreModule.forRoot({ authState: authReducer }),
+    EffectsModule.forRoot([AuthEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,6 +14,12 @@
       label="Profile"
       routerLink="/profile"
     ></button>
-    <button pButton class="flex m-2 p-button-danger" label="Log out"></button>
+    <button
+      *ngIf="(isLogged$ | async) == true"
+      pButton
+      class="flex m-2 p-button-danger"
+      label="Log out"
+      (click)="logOut()"
+    ></button>
   </div>
 </div>
