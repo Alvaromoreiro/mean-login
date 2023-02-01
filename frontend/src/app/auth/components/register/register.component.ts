@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { register } from '../../authStore/actions/auth.actions';
-import { selectIsAuthenticatedState, selectUserInfoState } from '../../authStore/selectors/auth.selectors';
 import { registerFormInterface } from '../../models/forms.model';
 import { RegisterRequest } from '../../services/models/auth-user.model';
 import { AppState } from '../../authStore/app.state'
+import { AuthComponentsConstants } from '../../constants/auth-components.constants';
 
 @Component({
   selector: 'app-register',
@@ -20,11 +19,7 @@ export class RegisterComponent {
   isPasswordVisible: boolean = false;
   isFormSubmitted: boolean = false;
 
-  usernameRegex: RegExp = /^[a-zA-Z0-9]+$/;
-  emailRegex: RegExp = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-  passwordRegex: RegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
-  usernameFilterRegex: RegExp = /[^a-zA-Z0-9]/g;
 
   private passwordMatchValidator: ValidationErrors = (form: FormGroup) => {
     if (form.get('password')?.value !== form.get('passwordConfirm')?.value) {
@@ -34,10 +29,10 @@ export class RegisterComponent {
   };
 
   public registerForm = new FormGroup<registerFormInterface>({
-    username: new FormControl('', [Validators.pattern(this.usernameRegex), Validators.required]),
-    email: new FormControl('', [Validators.pattern(this.emailRegex), Validators.required]),
-    password: new FormControl('', [Validators.pattern(this.passwordRegex), Validators.required]),
-    passwordConfirm: new FormControl('', [Validators.pattern(this.passwordRegex), Validators.required])
+    username: new FormControl('', [Validators.pattern(AuthComponentsConstants.usernameRegex), Validators.required]),
+    email: new FormControl('', [Validators.pattern(AuthComponentsConstants.emailRegex), Validators.required]),
+    password: new FormControl('', [Validators.pattern(AuthComponentsConstants.passwordRegex), Validators.required]),
+    passwordConfirm: new FormControl('', [Validators.pattern(AuthComponentsConstants.passwordRegex), Validators.required])
   }, this.passwordMatchValidator);
 
   onSubmit() {

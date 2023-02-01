@@ -35,7 +35,6 @@ export class MenuComponent implements OnInit {
   }
 
   logOut() {
-    console.log(this.userInfo)
     const logOutRequest: LogOutRequest = {
       email: this.userInfo?.email ? this.userInfo?.email : '',
       accessToken: this.userInfo?.token ? this.userInfo?.token : ''

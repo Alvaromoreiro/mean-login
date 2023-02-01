@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AuthConstants } from '../services/constants/auth.constants'
+import { AuthConstants } from '../constants/auth-service.constants'
 import { LoginRequest, LoginResponse, LogOutRequest, RegisterRequest, RegisterResponse } from './models/auth-user.model';
 
 @Injectable({
@@ -15,11 +15,6 @@ export class AuthService {
     return this.http.post<LoginResponse>(AuthConstants.SERVER_URL + AuthConstants.END_POINTS.LOGIN, user);
   }
 
-  /*
-  * @describe: The register method is used to register a new user.
-  * It takes a RegisterRequest object as a parameter.
-  * It returns an Observable of type RegisterResponse.
-  */
   register(user: RegisterRequest): Observable<RegisterResponse> {
     return this.http.post<RegisterResponse>(AuthConstants.SERVER_URL + AuthConstants.END_POINTS.REGISTER, user);
   }
