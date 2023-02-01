@@ -48,7 +48,7 @@ exports.loginUser = ( req, res, next ) => {
                     const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, {
                         expiresIn: expiresIn
                     });
-                    res.send({accessToken, expiresIn});
+                    res.send({email: user.email, username: user.username,accessToken, expiresIn});
                 }else {
                     res.status(409).send('Incorrect password');
                 }
@@ -64,7 +64,6 @@ exports.loginUser = ( req, res, next ) => {
 }
 
 exports.logoutUser = (req, res, next) => {
-    console.log(req)
     const accessToken = req.headers['authorization'];
     const userData = {
         email: req.body.email
