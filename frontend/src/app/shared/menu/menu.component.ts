@@ -27,7 +27,6 @@ export class MenuComponent implements OnInit {
     this.ngDestroyed$.next(null);
   }
 
-
   ngOnInit(): void {
     this.userInfo$
       .pipe(takeUntil(this.ngDestroyed$))
