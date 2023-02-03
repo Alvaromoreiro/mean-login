@@ -80,9 +80,8 @@ exports.logoutUser = (req, res, next) => {
                     if (!user) {
                         return res.status(404).send('User not found');
                     }else {
-                        res.send({message: 'User logged out successfully', token: null});
+                        return res.send({message: 'User logged out successfully', token: null});
                     }
-                    res.send('User logged out successfully');
                 })
                 .catch(err => {
                     res.status(500).send('Server error');
