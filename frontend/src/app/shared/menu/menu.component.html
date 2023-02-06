@@ -1,8 +1,15 @@
 <div class="flex justify-content-center">
   <div class="flex flex-row">
     <button pButton class="flex m-2" label="Home" routerLink=""></button>
-    <button pButton class="flex m-2" label="Login" routerLink="/login"></button>
     <button
+      *ngIf="(isLogged$ | async) == false"
+      pButton
+      class="flex m-2"
+      label="Login"
+      routerLink="/login"
+    ></button>
+    <button
+      *ngIf="(isLogged$ | async) == false"
       pButton
       class="flex m-2"
       label="Register"

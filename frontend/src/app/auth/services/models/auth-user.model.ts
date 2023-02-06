@@ -17,8 +17,9 @@ export interface LogOutRequest {
 export interface LoginResponse {
   username: string,
   email: string,
-  accessToken: string;
+  token: string;
   expiresIn: number;
+  isLogged: boolean;
 }
 
 export interface RegisterResponse {
@@ -26,5 +27,6 @@ export interface RegisterResponse {
   email: string,
   accessToken: string;
   expiresIn: number;
+  isLogged: boolean;
 }
 

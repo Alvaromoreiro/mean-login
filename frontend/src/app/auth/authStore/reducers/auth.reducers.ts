@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { login, loginFailure, loginSuccess, logOut, logOutFaliure, logOutSuccess, register, registerFailure, registerSuccess } from '../actions/auth.actions';
+import { login, loginFailure, loginSuccess, logOut, logOutFaliure, logOutSuccess, register, registerFailure, registerSuccess, setStoreData } from '../actions/auth.actions';
 import { UserInferface } from './../../models/user.model';
 
 export interface AuthState {
@@ -21,19 +21,19 @@ export const authReducer = createReducer(
   initialState,
   on(login, (state, { email, password }) => ({ ...state, status: 'loading' })),
   on(register, (state, { email, username, password }) => ({ ...state, status: 'loading' })),
-  on(loginSuccess, (state, { username, email, accessToken, expiresIn }) =>
+  on(loginSuccess, (state, { username, email, token, expiresIn, isLogged }) =>
   ({
     ...state,
     isAuthenticated: true,
-    user: { email: email, username: username, token: accessToken, expiresIn: expiresIn },
+    user: { email: email, username: username, token: token, expiresIn: expiresIn, isLogged: isLogged },
     status: 'success'
   })
   ),
-  on(registerSuccess, (state, { username, email, accessToken, expiresIn }) =>
+  on(registerSuccess, (state, { username, email, accessToken, expiresIn, isLogged }) =>
   ({
     ...state,
     isAuthenticated: true,
-    user: { email: email, username: username, token: accessToken, expiresIn: expiresIn },
+    user: { email: email, username: username, token: accessToken, expiresIn: expiresIn, isLogged: isLogged },
     status: 'success'
   })
   ),
@@ -75,6 +75,14 @@ export const authReducer = createReducer(
     ...state,
     error: error,
     status: 'error'
+  })
+  ),
+  on(setStoreData, (state, { username, email, token, expiresIn, isLogged }) =>
+  ({
+    ...state,
+    isAuthenticated: true,
+    user: { email: email, username: username, token: token, expiresIn: expiresIn, isLogged: isLogged },
+    status: 'success'
   })
   ),
 )

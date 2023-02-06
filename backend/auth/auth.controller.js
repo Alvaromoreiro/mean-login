@@ -16,12 +16,13 @@ exports.registerUser = (req, res, next) => {
         newUser.password = hash;
         User.create(newUser)
         .then(user => {
-            const expiresIn = 24 * 60 * 60;
+            // The first number (11) are the minutes that the token is valid
+            const expiresIn = 11 * 60 * 1000;
             const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, {
                 expiresIn: expiresIn
             });
 
-            res.send({ email: newUser.email, username: newUser.username, accessToken, expiresIn });
+            res.send({ email: newUser.email, username: newUser.username, accessToken, expiresIn, isLogged: true });
         })
         .catch(err => {
             res.status(500).send(err);
@@ -48,7 +49,7 @@ exports.loginUser = ( req, res, next ) => {
                     const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, {
                         expiresIn: expiresIn
                     });
-                    res.send({email: user.email, username: user.username,accessToken, expiresIn});
+                    res.send({email: user.email, username: user.username,accessToken, expiresIn, isLogged: true});
                 }else {
                     res.status(409).send('Incorrect password');
                 }

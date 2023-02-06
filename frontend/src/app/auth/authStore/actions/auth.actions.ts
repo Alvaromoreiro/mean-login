@@ -1,4 +1,5 @@
 import { createAction, props } from '@ngrx/store';
+import { UserInferface } from '../../models/user.model';
 import { LoginRequest, LoginResponse, LogOutRequest, RegisterRequest, RegisterResponse } from '../../services/models/auth-user.model';
 
 export const register = createAction(
@@ -47,6 +48,11 @@ export const logOutFaliure = createAction(
   props<{ error: any }>()
 );
 
+export const setStoreData = createAction(
+  '[Auth] setStoreData',
+  props<UserInferface>()
+);
+
 
 export type AuthActions = typeof login | typeof loginSuccess | typeof loginFailure |
-  typeof logOut | typeof register | typeof registerSuccess | typeof registerFailure;
+  typeof logOut | typeof register | typeof registerSuccess | typeof registerFailure | typeof setStoreData;
