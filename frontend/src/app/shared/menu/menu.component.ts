@@ -15,13 +15,12 @@ import { SessionService } from 'src/app/auth/services/session.service';
 })
 export class MenuComponent implements OnInit {
 
+  constructor(private store: Store<AppState>, private sessionService: SessionService) {}
+
   public isLogged$ = this.store.select(selectIsAuthenticatedState);
   public userInfo$ = this.store.select(selectUserInfoState);
   public userInfo: UserInferface | null = null;
   public ngDestroyed$ = new Subject();
-
-  constructor(private store: Store<AppState>, private sessionService: SessionService) {}
-
 
   public ngOnDestroy() {
     this.ngDestroyed$.next(null);

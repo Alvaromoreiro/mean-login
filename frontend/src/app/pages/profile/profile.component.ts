@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Subject, takeUntil, tap } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { AppState } from 'src/app/auth/authStore/app.state';
-import { AuthState } from 'src/app/auth/authStore/reducers/auth.reducers';
 import { selectUserInfoState } from 'src/app/auth/authStore/selectors/auth.selectors';
 import { UserInferface } from 'src/app/auth/models/user.model';
 
