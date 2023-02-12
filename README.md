@@ -33,11 +33,11 @@ Modifica el siguiente archivo
 
 **PORT:** Puerto en el que se desplegará el servidor
 
-## Ejecute el siguiente comando para iniciar el servidor:
+## Ejecute los siguientes comandos para iniciar el servidor:
 ```node
 npm i
 ```
-
+---
 ```node
 npm run start
 ```
