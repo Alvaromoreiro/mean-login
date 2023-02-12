@@ -21,7 +21,8 @@ Copy code
 # Configuración del Backend
 Modifica el siguiente archivo
 ```js 
-/mean-login/backend/config/properties.js```
+/mean-login/backend/config/properties.js
+```
 # Puerto de la aplicación
 PORT=3000
 Ejecute el siguiente comando para iniciar el servidor:
