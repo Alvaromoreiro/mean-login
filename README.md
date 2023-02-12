@@ -1,93 +1,76 @@
-# MEAN Login Web Project
+Proyecto Angular 14 con MEAN Stack y Store de NGRX
+Este proyecto de Angular 14 con MEAN Stack y Store de NGRX es un ejemplo de una aplicación web completa con una arquitectura moderna y escalable. Utiliza tecnologías y librerías populares para el desarrollo de aplicaciones web, tanto en el front-end como en el back-end.
 
-This project is a web login application developed with the MEAN stack (MongoDB, Express.js, Angular and Node.js). It includes state control and a MongoDB database.
+Requisitos previos
+Antes de poder ejecutar el proyecto, debe tener instalado lo siguiente en su sistema:
 
-## Backend
+Node.js (versión 12 o superior)
+MongoDB (versión 4 o superior)
+Configuración del proyecto
+Para configurar el proyecto, siga los siguientes pasos:
 
-The backend is developed with JavaScript and uses the following libraries:
+Clone este repositorio a su sistema local.
+Abra una terminal y navegue hasta el directorio raíz del proyecto.
+Ejecute el siguiente comando para instalar las dependencias del proyecto:
+bash
+Copy code
+npm install
+Cree un archivo .env en la raíz del proyecto y configure las variables de entorno necesarias, como se indica a continuación:
+bash
+Copy code
+# Configuración de MongoDB
+MONGODB_URI=mongodb://localhost/mydatabase
 
-**bcryptjs** to encrypt user passwords
+# Configuración de JWT
+JWT_SECRET=mysecretkey
+JWT_EXPIRATION=3600
 
-**body-parser** to parse data sent in HTTP requests
+# Puerto de la aplicación
+PORT=3000
+Ejecute el siguiente comando para iniciar el servidor:
+bash
+Copy code
+npm run start
+Tecnologías y librerías utilizadas
+Este proyecto utiliza las siguientes tecnologías y librerías:
 
-**express** as a framework for server development
+Front-end
+Angular 14
+PrimeNG
+RxJS
+PrimeFlex
+PrimeIcons
+NGRX Store
+NGRX Effects
+Back-end
+BcryptJS
+Body-parser
+Express
+Jsonwebtoken
+Mongoose
+Nodemon
+Estructura del proyecto
+El proyecto está estructurado en diferentes directorios para separar las responsabilidades del front-end y del back-end.
 
-**jsonwebtoken** to generate authentication tokens
+Directorio client
+Este directorio contiene todo el código fuente del front-end de la aplicación. Se utiliza Angular 14 para desarrollar la interfaz de usuario y PrimeNG para los componentes de la interfaz de usuario.
 
-**mongoose** to connect to and perform operations on the MongoDB database
+Directorio server
+Este directorio contiene todo el código fuente del back-end de la aplicación. Se utiliza Express para crear el servidor y Mongoose para interactuar con la base de datos MongoDB. Además, se utiliza Nodemon para reiniciar automáticamente el servidor cuando se detectan cambios en los archivos.
 
-**nodemon** to facilitate development, as it allows the server to automatically restart when code changes are detected
+Directorio shared
+Este directorio contiene archivos compartidos entre el front-end y el back-end, como modelos de datos y constantes.
 
-## Frontend
+Directorio dist
+Este directorio contiene los archivos compilados y optimizados para producción del front-end de la aplicación.
 
-The frontend is developed with Angular 13.2.3 and uses the following libraries:
+Directorio node_modules
+Este directorio contiene las dependencias del proyecto.
 
-**primeng** to provide a set of UI components
+Contribuyendo
+Si desea contribuir a este proyecto, puede hacerlo de la siguiente manera:
 
-**primeflex** to facilitate the creation of a responsive design
-
-**primeicons** to provide a set of icons
-
-**rxjs** to facilitate reactive programming
-
-## Usage Instructions
-
-Clone the repository and navigate to the project folder in your terminal
-Run npm install to install the backend dependencies
-Run ng install to install the frontend dependencies
-Run npm run start to start the server and the frontend
-Open http://localhost:3000 in your browser to access the application
-
-## Notes
-
-Make sure MongoDB is installed and running on your system before starting the server
-If you want to change the database connection settings, modify the config.js file in the backend folder
-If you want to make changes to the frontend, make sure to be in the frontend folder before running any Angular commands
-
----
-
-# Proyecto MEAN de Login Web
-
-Este proyecto es una aplicación web de login desarrollada con el stack MEAN (MongoDB, Express.js, Angular y Node.js). Incluye control de estados y una base de datos MongoDB.
-
-## Backend
-
-El backend está desarrollado con JavaScript y utiliza las siguientes librerías:
-
-**bcryptjs** para encriptar las contraseñas de los usuarios
-
-**body-parser** para parsear los datos enviados en las peticiones HTTP
-
-**express** como framework para el desarrollo del servidor
-
-**jsonwebtoken** para generar tokens de autenticación
-
-**mongoose** para conectarse y realizar operaciones en la base de datos MongoDB
-
-**nodemon** para facilitar el desarrollo, ya que permite reiniciar automáticamente el servidor al detectar cambios en el código
-
-## Frontend
-
-El frontend está desarrollado con Angular 13.2.3 y utiliza las siguientes librerías:
-
-**primeng** para proveer un conjunto de componentes de UI
-
-**primeflex** para facilitar la creación de un diseño responsive
-
-**primeicons** para proveer un conjunto de iconos
-
-**rxjs** para facilitar la programación reactiva
-
-## Instrucciones de uso
-
-Clona el repositorio y navega hasta la carpeta del proyecto en tu terminal
-Ejecuta npm install para instalar las dependencias del backend
-Ejecuta ng install para instalar las dependencias del frontend
-Ejecuta npm run start para iniciar el servidor y el frontend
-Abre http://localhost:4200 en tu navegador para acceder a la aplicación
-
-## Notas
-
-Asegúrate de tener MongoDB instalado y ejecutándose en tu sistema antes de iniciar el servidor
-Si deseas cambiar la configuración de la conexión a la base de datos, modifica el archivo config.js en la carpeta backend
-Si deseas realizar cambios en el frontend, asegúrate de estar en la carpeta frontend antes de ejecutar cualquier comando de Angular
+Fork este repositorio.
+Cree una rama nueva en su repositorio.
+Haga sus cambios en la rama nueva.
+Cree un pull request desde su rama a la rama main de este repositorio.
