@@ -1,7 +1,7 @@
-Proyecto Angular 14 con MEAN Stack y Store de NGRX
+# Proyecto Angular 14 con MEAN Stack y Store de NGRX
 Este proyecto de Angular 14 con MEAN Stack y Store de NGRX es un ejemplo de una aplicación web completa con una arquitectura moderna y escalable. Utiliza tecnologías y librerías populares para el desarrollo de aplicaciones web, tanto en el front-end como en el back-end.
 
-Requisitos previos
+## Requisitos previos
 Antes de poder ejecutar el proyecto, debe tener instalado lo siguiente en su sistema:
 
 Node.js (versión 12 o superior)
