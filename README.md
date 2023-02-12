@@ -1,7 +1,9 @@
 # Proyecto Angular 14 con MEAN Stack y Store de NGRX
+
 Este proyecto de Angular 14 con MEAN Stack y Store de NGRX es un ejemplo de una aplicación web completa con una arquitectura moderna y escalable. Utiliza tecnologías y librerías populares para el desarrollo de aplicaciones web, tanto en el front-end como en el back-end.
 
 ## Requisitos previos
+
 Antes de poder ejecutar el proyecto, debe tener instalado lo siguiente en su sistema:
 
 Node.js (versión 12 o superior)
@@ -19,13 +21,16 @@ Cree un archivo .env en la raíz del proyecto y configure las variables de entor
 bash
 Copy code
 ## Configuración del Backend
+
 Modifica el siguiente archivo
 ```js 
 /mean-login/backend/config/properties.js
 ```
 
 **USER:** Usuario propietario de la base de datos MongoDB
+
 **PASSWORD:** Contraseña de la base de datos MongoDB
+
 **PORT:** Puerto en el que se desplegará el servidor
 
 ## Ejecute el siguiente comando para iniciar el servidor:
