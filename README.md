@@ -51,11 +51,16 @@ Este proyecto utiliza las siguientes tecnologías y librerías:
 **NGRX Effects** es una biblioteca para la gestión de efectos secundarios (side effects) en aplicaciones Angular con NGRX, que ayuda a manejar las llamadas HTTP, la navegación y otros efectos secundarios que pueden ser necesarios en las aplicaciones.
 
 En cuanto al back-end, 
+
 **BcryptJS** es una biblioteca para el cifrado de contraseñas.
+
 **Body-parser** es un middleware para parsear los cuerpos de las solicitudes HTTP.
+
 **Express** es un framework para construir aplicaciones web en Node.js.
+
 **Jsonwebtoken** es una biblioteca para la creación y verificación de tokens de autenticación JWT.
-Mongoose es una biblioteca de modelado de datos para MongoDB, y Nodemon es una herramienta para reiniciar automáticamente una aplicación Node.js en el servidor cuando se detectan cambios en el código fuente.
+
+**Mongoose es una biblioteca de modelado de datos para MongoDB, y Nodemon es una herramienta para reiniciar automáticamente una aplicación Node.js en el servidor cuando se detectan cambios en el código fuente.
 
 ## Estructura del proyecto
 
