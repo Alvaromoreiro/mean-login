@@ -13,14 +13,11 @@ Para configurar el proyecto, siga los siguientes pasos:
 
 Clone este repositorio a su sistema local.
 Abra una terminal y navegue hasta el directorio raíz del proyecto.
-Ejecute el siguiente comando para instalar las dependencias del proyecto:
-bash
-Copy code
+Ejecute el siguiente comando para instalar las dependencias del proyecto (realizar en ambos repositorios frontend & backend):
+```bash
 npm install
-Cree un archivo .env en la raíz del proyecto y configure las variables de entorno necesarias, como se indica a continuación:
-bash
-Copy code
-## Configuración del Backend
+```
+## Configuración del backend
 
 Modifica el siguiente archivo
 ```js 
@@ -32,33 +29,29 @@ Modifica el siguiente archivo
 **PASSWORD:** Contraseña de la base de datos MongoDB
 
 **PORT:** Puerto en el que se desplegará el servidor
-
-## Ejecute los siguientes comandos para iniciar el servidor:
-```node
-npm i
-```
----
+## Ejecute los siguientes comandos para iniciar el servidor (frontend & backend):
 ```node
 npm run start
 ```
 ## Tecnologías y librerías utilizadas
 Este proyecto utiliza las siguientes tecnologías y librerías:
 
-Front-end
-Angular 14
-PrimeNG
-RxJS
-PrimeFlex
-PrimeIcons
-NGRX Store
-NGRX Effects
-Back-end
-BcryptJS
-Body-parser
-Express
-Jsonwebtoken
-Mongoose
-Nodemon
+**Angular 14:** es un framework de desarrollo web de código abierto y basado en TypeScript. Es utilizado para construir aplicaciones web dinámicas del lado del cliente, con enfoque en la modularidad y la escalabilidad.
+
+**PrimeNG es una biblioteca de componentes de interfaz de usuario (UI) para Angular, que proporciona una amplia gama de componentes y temas predefinidos para crear interfaces de usuario modernas y atractivas.
+
+RxJS es una biblioteca de programación reactiva para JavaScript, que proporciona una amplia gama de operadores para trabajar con secuencias de eventos, incluyendo observables, promesas y eventos.
+
+PrimeFlex es una biblioteca de clases CSS para construir diseños responsivos y flexibles en Angular, que proporciona una amplia gama de utilidades de diseño y de utilidades de visualización.
+
+PrimeIcons es una biblioteca de iconos para Angular, que proporciona una amplia gama de iconos vectoriales para su uso en interfaces de usuario.
+
+NGRX Store es una biblioteca de gestión de estado para Angular, que proporciona una arquitectura de almacenamiento unificado para las aplicaciones que utilizan Angular, facilitando la gestión del estado de la aplicación.
+
+NGRX Effects es una biblioteca para la gestión de efectos secundarios (side effects) en aplicaciones Angular con NGRX, que ayuda a manejar las llamadas HTTP, la navegación y otros efectos secundarios que pueden ser necesarios en las aplicaciones.
+
+En cuanto al back-end, BcryptJS es una biblioteca para el cifrado de contraseñas, Body-parser es un middleware para parsear los cuerpos de las solicitudes HTTP, Express es un framework para construir aplicaciones web en Node.js, Jsonwebtoken es una biblioteca para la creación y verificación de tokens de autenticación JWT, Mongoose es una biblioteca de modelado de datos para MongoDB, y Nodemon es una herramienta para reiniciar automáticamente una aplicación Node.js en el servidor cuando se detectan cambios en el código fuente.
+
 ## Estructura del proyecto
 
 El proyecto está estructurado en diferentes directorios para separar las responsabilidades del front-end y del back-end.
