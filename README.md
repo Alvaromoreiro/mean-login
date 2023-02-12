@@ -36,7 +36,7 @@ npm run start
 ## Tecnologías y librerías utilizadas
 Este proyecto utiliza las siguientes tecnologías y librerías:
 
-**Angular 14:** es un framework de desarrollo web de código abierto y basado en TypeScript. Es utilizado para construir aplicaciones web dinámicas del lado del cliente, con enfoque en la modularidad y la escalabilidad.
+**Angular 14** es un framework de desarrollo web de código abierto y basado en TypeScript. Es utilizado para construir aplicaciones web dinámicas del lado del cliente, con enfoque en la modularidad y la escalabilidad.
 
 **PrimeNG** es una biblioteca de componentes de interfaz de usuario (UI) para Angular, que proporciona una amplia gama de componentes y temas predefinidos para crear interfaces de usuario modernas y atractivas.
 
@@ -50,7 +50,7 @@ Este proyecto utiliza las siguientes tecnologías y librerías:
 
 **NGRX Effects** es una biblioteca para la gestión de efectos secundarios (side effects) en aplicaciones Angular con NGRX, que ayuda a manejar las llamadas HTTP, la navegación y otros efectos secundarios que pueden ser necesarios en las aplicaciones.
 
-En cuanto al back-end, 
+En cuanto al back-end
 
 **BcryptJS** es una biblioteca para el cifrado de contraseñas.
 
@@ -60,7 +60,7 @@ En cuanto al back-end,
 
 **Jsonwebtoken** es una biblioteca para la creación y verificación de tokens de autenticación JWT.
 
-**Mongoose es una biblioteca de modelado de datos para MongoDB, y Nodemon es una herramienta para reiniciar automáticamente una aplicación Node.js en el servidor cuando se detectan cambios en el código fuente.
+**Mongoose** es una biblioteca de modelado de datos para MongoDB, y Nodemon es una herramienta para reiniciar automáticamente una aplicación Node.js en el servidor cuando se detectan cambios en el código fuente.
 
 ## Estructura del proyecto
 
