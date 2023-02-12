@@ -18,7 +18,7 @@ npm install
 Cree un archivo .env en la raíz del proyecto y configure las variables de entorno necesarias, como se indica a continuación:
 bash
 Copy code
-# Configuración del Backend
+## Configuración del Backend
 Modifica el siguiente archivo
 ```js 
 /mean-login/backend/config/properties.js
@@ -28,13 +28,11 @@ Modifica el siguiente archivo
 **PASSWORD:** Contraseña de la base de datos MongoDB
 **PORT:** Puerto en el que se desplegará el servidor
 
-# Puerto de la aplicación
-PORT=3000
-Ejecute el siguiente comando para iniciar el servidor:
-bash
-Copy code
+## Ejecute el siguiente comando para iniciar el servidor:
+```node
 npm run start
-Tecnologías y librerías utilizadas
+```
+## Tecnologías y librerías utilizadas
 Este proyecto utiliza las siguientes tecnologías y librerías:
 
 Front-end
@@ -52,7 +50,7 @@ Express
 Jsonwebtoken
 Mongoose
 Nodemon
-Estructura del proyecto
+## Estructura del proyecto
 El proyecto está estructurado en diferentes directorios para separar las responsabilidades del front-end y del back-end.
 
 Directorio client
