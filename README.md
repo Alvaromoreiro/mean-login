@@ -18,13 +18,11 @@ npm install
 Cree un archivo .env en la raíz del proyecto y configure las variables de entorno necesarias, como se indica a continuación:
 bash
 Copy code
-# Configuración de MongoDB
-MONGODB_URI=mongodb://localhost/mydatabase
-
-# Configuración de JWT
-JWT_SECRET=mysecretkey
-JWT_EXPIRATION=3600
-
+# Configuración del Backend
+Modifica el archivo properties.js
+```js 
+properties.js
+```
 # Puerto de la aplicación
 PORT=3000
 Ejecute el siguiente comando para iniciar el servidor:
