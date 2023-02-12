@@ -35,6 +35,10 @@ Modifica el siguiente archivo
 
 ## Ejecute el siguiente comando para iniciar el servidor:
 ```node
+npm i
+```
+
+```node
 npm run start
 ```
 ## Tecnologías y librerías utilizadas
@@ -56,24 +60,20 @@ Jsonwebtoken
 Mongoose
 Nodemon
 ## Estructura del proyecto
+
 El proyecto está estructurado en diferentes directorios para separar las responsabilidades del front-end y del back-end.
 
-Directorio client
+### Directorio frontend
+
 Este directorio contiene todo el código fuente del front-end de la aplicación. Se utiliza Angular 14 para desarrollar la interfaz de usuario y PrimeNG para los componentes de la interfaz de usuario.
 
-Directorio server
+### Directorio backend
+
 Este directorio contiene todo el código fuente del back-end de la aplicación. Se utiliza Express para crear el servidor y Mongoose para interactuar con la base de datos MongoDB. Además, se utiliza Nodemon para reiniciar automáticamente el servidor cuando se detectan cambios en los archivos.
 
-Directorio shared
-Este directorio contiene archivos compartidos entre el front-end y el back-end, como modelos de datos y constantes.
 
-Directorio dist
-Este directorio contiene los archivos compilados y optimizados para producción del front-end de la aplicación.
+## Contribuye!
 
-Directorio node_modules
-Este directorio contiene las dependencias del proyecto.
-
-Contribuyendo
 Si desea contribuir a este proyecto, puede hacerlo de la siguiente manera:
 
 Fork este repositorio.
