@@ -8,7 +8,9 @@ Antes de poder ejecutar el proyecto, debe tener instalado lo siguiente en su sis
 
 Node.js (versión 12 o superior)
 MongoDB (versión 4 o superior)
+
 Configuración del proyecto
+
 Para configurar el proyecto, siga los siguientes pasos:
 
 Clone este repositorio a su sistema local.
@@ -20,7 +22,7 @@ npm install
 ## Configuración del backend
 
 Modifica el siguiente archivo
-```js 
+```bash 
 /mean-login/backend/config/properties.js
 ```
 
@@ -30,10 +32,13 @@ Modifica el siguiente archivo
 
 **PORT:** Puerto en el que se desplegará el servidor
 ## Ejecute los siguientes comandos para iniciar el servidor (frontend & backend):
+
 ```node
 npm run start
 ```
+
 ## Tecnologías y librerías utilizadas
+
 Este proyecto utiliza las siguientes tecnologías y librerías:
 
 **Angular 14** es un framework de desarrollo web de código abierto y basado en TypeScript. Es utilizado para construir aplicaciones web dinámicas del lado del cliente, con enfoque en la modularidad y la escalabilidad.
