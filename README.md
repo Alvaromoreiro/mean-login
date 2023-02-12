@@ -1,3 +1,5 @@
+![Moreiro_minimalist_galaxy_2955319d-892d-4304-b5bb-7fda2506975b](https://user-images.githubusercontent.com/57747327/218338031-f4100736-4083-49cc-8563-2f43bc4c1b10.png)
+---
 # Angular 14 Project with MEAN Stack and NGRX Store
 
 This Angular 14 project with MEAN Stack and NGRX Store is an example of a complete web application with a modern and scalable architecture. It uses popular technologies and libraries for web application development, both on the front-end and back-end.
