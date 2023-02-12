@@ -23,6 +23,11 @@ Modifica el siguiente archivo
 ```js 
 /mean-login/backend/config/properties.js
 ```
+
+**USER:** Usuario propietario de la base de datos MongoDB
+**PASSWORD:** Contraseña de la base de datos MongoDB
+**PORT:** Puerto en el que se desplegará el servidor
+
 # Puerto de la aplicación
 PORT=3000
 Ejecute el siguiente comando para iniciar el servidor:
