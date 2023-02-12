@@ -2,6 +2,8 @@
 
 This Angular 14 project with MEAN Stack and NGRX Store is an example of a complete web application with a modern and scalable architecture. It uses popular technologies and libraries for web application development, both on the front-end and back-end.
 
+- [Readme file in spanish](README-es.md)
+
 ## Prerequisites
 
 Before running the project, you must have the following installed on your system:
