@@ -19,10 +19,9 @@ Cree un archivo .env en la raíz del proyecto y configure las variables de entor
 bash
 Copy code
 # Configuración del Backend
-Modifica el archivo properties.js
+Modifica el siguiente archivo
 ```js 
-properties.js
-```
+/mean-login/backend/config/properties.js```
 # Puerto de la aplicación
 PORT=3000
 Ejecute el siguiente comando para iniciar el servidor:
