@@ -1,7 +1,7 @@
 const User = require('./auth.dao');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const SECRET_KEY = 'secret123';
+const properties = require('./config/properties');
 
 exports.registerUser = (req, res, next) => {
     
@@ -18,7 +18,7 @@ exports.registerUser = (req, res, next) => {
         .then(user => {
             // The first number (11) are the minutes that the token is valid
             const expiresIn = 11 * 60 * 1000;
-            const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, {
+            const accessToken = jwt.sign({ id: user.id }, properties.SECRET_KEY, {
                 expiresIn: expiresIn
             });
 
@@ -46,7 +46,7 @@ exports.loginUser = ( req, res, next ) => {
             .then(result => {
                 if(result){
                     const expiresIn = 24 * 60 * 60;
-                    const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, {
+                    const accessToken = jwt.sign({ id: user.id }, properties.SECRET_KEY, {
                         expiresIn: expiresIn
                     });
                     res.send({email: user.email, username: user.username,accessToken, expiresIn, isLogged: true});
@@ -72,7 +72,7 @@ exports.logoutUser = (req, res, next) => {
     if (!accessToken) {
         return res.status(401).send('Access token not found');
     }
-    jwt.verify(accessToken, SECRET_KEY, (err, user) => {
+    jwt.verify(accessToken, properties.SECRET_KEY, (err, user) => {
         if (err) {
             return res.status(403).send('Invalid access token');
         } else {

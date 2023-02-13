@@ -16,13 +16,16 @@ Para configurar el proyecto, siga los siguientes pasos:
 Clone este repositorio a su sistema local.
 Abra una terminal y navegue hasta el directorio raíz del proyecto.
 Ejecute el siguiente comando para instalar las dependencias del proyecto (realizar en ambos repositorios frontend & backend):
+
 ```bash
 npm install
 ```
+
 ## Configuración del backend
 
 Modifica el siguiente archivo
-```bash 
+
+```bash
 /mean-login/backend/config/properties.js
 ```
 
@@ -31,6 +34,9 @@ Modifica el siguiente archivo
 **PASSWORD:** Contraseña de la base de datos MongoDB
 
 **PORT:** Puerto en el que se desplegará el servidor
+
+**SECRET_KEY:** Contraseña con la cual puedes firmar los tokens de acceso de manera privada
+
 ## Ejecute los siguientes comandos para iniciar el servidor (frontend & backend):
 
 ```node
@@ -78,7 +84,6 @@ Este directorio contiene todo el código fuente del front-end de la aplicación.
 ### Directorio backend
 
 Este directorio contiene todo el código fuente del back-end de la aplicación. Se utiliza Express para crear el servidor y Mongoose para interactuar con la base de datos MongoDB. Además, se utiliza Nodemon para reiniciar automáticamente el servidor cuando se detectan cambios en los archivos.
-
 
 ## Contribuye!
 
