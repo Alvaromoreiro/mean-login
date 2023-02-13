@@ -1,5 +1,5 @@
 const USER = 'admin';
-const PASSWORD = 'WX32FQEOG9n5xV91';
+const PASSWORD = '----------------';
 
 module.exports = {
     SECRET_KEY: 'secret123',
